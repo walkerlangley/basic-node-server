@@ -1,0 +1,36 @@
+{
+  "name": "basic-node-server",
+  "version": "1.0.0",
+  "description": "Boilerplate for node.js server with secure login using Express and jwt",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/walkerlangley/basic-node-server.git"
+  },
+  "author": "Walker Langley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/walkerlangley/basic-node-server/issues"
+  },
+  "homepage": "https://github.com/walkerlangley/basic-node-server",
+  "dependencies": {
+    "babel": "^6.5.2",
+    "babel-core": "^6.9.1",
+    "babel-loader": "^6.2.4",
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4",
+    "mongoose": "^4.4.20",
+    "morgan": "^1.7.0",
+    "nodemon": "^1.9.2",
+    "webpack": "^1.13.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.9.0",
+    "babel-core": "^6.9.1",
+    "babel-preset-es2015": "^6.9.0"
+  }
+}
