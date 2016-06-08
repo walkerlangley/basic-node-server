@@ -2,8 +2,13 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const http = require('http');
-
 const app = express();
+const router = require('./router');
+const mongoose = require('mongoose');
+
+
+// DB Setup
+mongoose.connect('mongodb://localhost:auth/auth')
 
 
 // Middleware
@@ -11,10 +16,8 @@ const app = express();
 app.use(morgan('combined'));
 app.use(bodyParser.json({ type: '*/*' }));
 
-// Routes Setup
-app.get("/", (req, res, next) => {
-  res.sendFile(__dirname + '/index.html');
-})
+router(app);
+
 
 
 // Server Setup
