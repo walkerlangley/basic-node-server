@@ -19,6 +19,15 @@ function tokenForUser(user) {
 }
 
 
+exports.signin = function(req, res, next) {
+  // User has already had their email and password authed,
+  // We just need to give them their token
+
+  // user is supplied by the callback from the passport middleware as
+  // req.user.  Thanks Passport!
+  res.send({ token: tokenForUser(req.user) });
+}
+
 
 exports.signup = function(req, res, next) {
   // See if a user with the submitted email exists
